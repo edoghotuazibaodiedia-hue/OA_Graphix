@@ -1,0 +1,586 @@
+/* CONTACT SECTION STYLES */
+:root  {
+    --primary: #1649D8;
+    --primary-light: #3B82F6;
+    --primary-dark: #0B1F3A;
+    --accent: #60A5FA;
+
+    --background: #07111F;
+    --surface: #0B1F3A;
+    --surface-light: #142B49;
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #A9B9CE;
+}
+
+header{
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--background);
+}
+
+.header{
+    width: 95%;
+    height: 100%;
+    background: var(--background);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h2{
+    font-size: 25px;
+}
+
+#letterX{
+    color: var(--accent);
+}
+
+nav{
+    width: 500px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: .3s ease;
+        padding: 4px 0;
+        cursor: pointer;
+    }:hover{
+        color: var(--primary-light);
+        text-shadow: 0 0 10px var(--primary-light);
+    }
+
+}
+
+#contactnav{
+    max-width: 900px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.passiveNavLink{
+    color: var(--surface-light);
+}
+
+.activeNavLink{
+    color: var(--primary-light);
+    border-bottom: 4px solid var(--primary-light);
+}
+
+.talkBtn{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button{
+        width: 150px;
+        height: 35px;
+        border: none;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 10px;
+        background: linear-gradient(-80deg, var(--surface), var(--surface-light));
+        color: var(--text-primary);
+        cursor: pointer;
+        opacity: 0.8;
+    }:active{
+        transform: scale(0.95);
+    }
+}
+
+.animateBtn{
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from{
+        transform: translateY(0px);
+        opacity: .5;
+    }
+
+    to{
+        transform: translateY(-10px);
+        opacity: .8;
+        box-shadow: 0 0 15px var(--primary);
+    }
+}
+
+.menuBtn{
+    /* background: var(--surface); */
+    width: 60px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    display: none;
+    span{
+        background: var(--text-primary);
+        width: 100%;
+        height: 3px;
+    }
+}
+
+aside{
+    background: var(--background);
+    border-right: 1px solid var(--primary);
+    top: 70px;
+    left: 0;
+    height: calc(100vh - 70px);
+    width: 300px;
+    display: flex;
+    position: relative;
+    position: fixed;
+    z-index: 900;
+}
+
+.sideNav{
+    margin-top: 50px;
+    display: flex;
+}
+
+.slideRight{
+    animation: slideRight 0.6s ease;
+}
+
+@keyframes slideRight {
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+#closeBtn{
+    color: var(--text-primary);
+    background: var(--primary);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px;
+    position: absolute;    
+    right: 0;
+    top: -1px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.flyRight{
+    animation: flyRight 1s ease;
+}
+
+@keyframes flyRight {
+    from{
+        opacity: 0.5;
+        transform: translateX(-50px);
+    }
+}
+
+.navLinks{
+    height: calc(100vh - 200px);
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    gap: 20px;
+}
+
+.activeSideLink{
+    font-size: 20px;
+    letter-spacing: 1.5;
+    color: var(--background);
+    background: var(--primary);
+    font-weight: bold;
+    width: 100%;
+    padding: 20px 15px;
+    text-align: right;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    opacity: 1;
+}
+
+.passiveSideLink{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: var(--text-primary);
+    font-weight: 500;
+    width: 100%;
+    padding: 20px 15px;
+    text-align: right;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    opacity: 0.5;
+}
+
+.contactContents{
+    width: 100vw;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    color: var(--text-primary);
+}
+
+.informationContainer{
+    width: 400px;
+    h2{
+        font-size: 25px;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+}
+
+.informationBox{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.informationContents{
+    h4{
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+
+.formContents{
+    width: 500px;
+    background: var(--surface);
+    padding: 20px;
+    border-radius: 10px;
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h2{
+            font-size: 25px;
+            font-weight: 600;
+        }
+    }
+}
+
+.form-control{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    label{
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    input{
+        height: 35px;
+        background: transparent;
+        border: 1px solid var(--primary-light);
+        border-radius: 10px;
+        outline: none;
+        padding-left: 20px;
+        transition: .3s ease;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: var(--text-primary);
+    }
+
+    input:focus{
+        box-shadow: 0 0 10px var(--primary-light);
+        /* border: 1px solid transparent; */
+    }
+
+    textarea{
+        height: 100px;
+        background: transparent;
+        border: 1px solid var(--primary-light);
+        border-radius: 10px;
+        outline: none;
+        padding: 20px;
+        transition: .3s ease;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: var(--text-primary);
+        resize: none;
+    }
+
+    textarea:focus{
+        box-shadow: 0 0 10px var(--primary-light);
+    }
+}
+
+#submitBtn{
+    background: var(--primary-light);
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--surface);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#submitBtn:hover{
+    transform: scale(0.98);
+}
+
+#contactError{
+    font-weight: 300;
+    text-align: center;
+    font-size: 14px;
+    color: #ff5454;
+}
+
+#contactLoader{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #07111f96;
+    position: absolute;
+    top: 0;
+    right: 0;
+    backdrop-filter: blur(1px);
+    color: var(--text-primary);
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--text-primary);
+    border-top: 10px solid transparent;
+    animation: turnAround 0.5s linear infinite;
+}
+
+@keyframes turnAround {
+    from{
+        transform: rotate(-360deg);
+    }
+}
+
+#loadingText{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#blink{
+    animation: appear 1s infinite;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    header{
+        height: 70px;
+    }
+
+    .header h2{
+        font-size: 20px;
+        width: 150px;
+    }
+
+    .talkBtn{
+        display: none;
+    }
+    
+    .menuBtn{
+        display: none;
+    }
+
+    .contactContents{
+        width: 100vw;
+        flex-direction: column;
+        padding-bottom: 200px;
+        /* min-height: 400px;
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+        padding-top: 100px;
+        color: var(--text-primary); */
+    }
+
+    .informationContainer{
+        width: 400px;
+        padding-left: 30px;
+    }
+
+    .informationBox{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 10px 0;
+    }
+
+    .informationContents{
+        img{
+            height: 15px;
+        }
+        
+        h4{
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        p{
+            font-size: 12px;
+        }
+    }
+
+    .formContents{
+        width: 530px;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 10px auto 0;
+        /* margin-left: 25px; */
+        form{
+            gap: 20px;
+            h2{
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .form-control{
+        gap: 5px;
+        label{
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        input{
+            height: 35px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    header{
+        height: 70px;
+    }
+
+    .header h2{
+        font-size: 20px;
+    }
+
+    #contactnav{
+        display: none;
+    }
+
+    .talkBtn{
+        display: none;
+    }
+
+    .menuBtn{
+        display: flex;
+    }
+
+    .contactContents{
+        width: 100vw;
+        flex-direction: column;
+        padding-bottom: 200px;
+        /* min-height: 400px;
+        display: flex;
+        justify-content: center;
+        gap: 0px;
+        padding-top: 100px;
+        color: var(--text-primary); */
+    }
+
+    .informationContainer{
+        width: 400px;
+        padding-left: 30px;
+    }
+
+    .informationBox{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 10px 0;
+    }
+
+    .informationContents{
+        img{
+            height: 15px;
+        }
+        
+        h4{
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        p{
+            font-size: 12px;
+        }
+    }
+
+    .formContents{
+        width: 330px;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 10px auto 0;
+        /* margin-left: 25px; */
+        form{
+            gap: 20px;
+            h2{
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .form-control{
+        gap: 5px;
+        label{
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        input{
+            height: 35px;
+        }
+    }
+}

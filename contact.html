@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact OA Graphix</title>
+
+    <link rel="stylesheet" href="./styles/inherit.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="header">
+                <h2><span id="letterX">OA</span> GRAPHI <span id="letterX">X</span></h2>
+
+                <nav id="contactnav">
+                    <p class="passiveNavLink" id="homeLink" onclick="window.location.href='index.html'">HOME</p>
+                    <!-- <p class="passiveNavLink" id="serviceLink" onclick="window.location.href='index.html'">SERVICES</p>
+                    <p class="passiveNavLink" id="aboutLink" onclick="window.location.href='index.html'">ABOUT</p>
+                    <p class="passiveNavLink" id="worksLink" onclick="window.location.href='index.html#design-section'">MY WORKS</p> -->
+                    <p class="activeNavLink" id="contactLink" onclick="window.location.href='contact.html'">CONTACT</p>
+                </nav>
+
+                <div class="talkBtn" onclick="gotoWhatsApp()">
+                    <button class="animateBtn" id="animateBtn">
+                        Let's Talk
+                        <img src="./images/white-arrow.png" alt="arrow-right_img">
+                    </button>
+                </div>
+
+                <div class="menuBtn" onclick="showSideNav()">
+                    <span id="line"></span>
+                    <span id="line"></span>
+                    <span id="line"></span>
+                </div>
+            </div>
+        </header>
+
+        <aside id="asideNavigation">
+            <div class="sideNav">
+                <div id="closeBtn" onclick="hideSideNav()">X</div>
+
+                <div class="navLinks">
+                    <p class="activeSideLink" id="sideHomeLink">HOME</p>
+                    <p class="passiveSideLink" id="sideServiceLink">SERVICES</p>
+                    <p class="passiveSideLink" id="sideWorksLink">MY WORKS</p>
+                    <p class="passiveSideLink" id="sideAboutLink">ABOUT</p>
+                    <p class="passiveSideLink" id="sideContactLink">CONTACT</p>
+                </div>
+            </div>
+        </aside>
+
+        <section class="contactContents">
+            <div class="informationContainer">
+                <h2>Contact Information</h2>
+                <div class="informationBox">
+                    <img src="./images/mail (1).png" alt="information_img" loading="lazy">
+                    <div class="informationContents">
+                        <h4>Email</h4>
+                        <p>olalianointed@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="informationBox">
+                    <img src="./images/phone.png" alt="information_img">
+                    <div class="informationContents">
+                        <h4>Phone</h4>
+                        <p>+234 916 6104 682</p>
+                    </div>
+                </div>
+
+                <div class="informationBox">
+                    <img src="./images/whatsApp-logo.png" alt="information_img" height="25px">
+                    <div class="informationContents">
+                        <h4>WhatsApp</h4>
+                        <p>+234 916 6104 682</p>
+                    </div>
+                </div>
+
+                <div class="informationBox">
+                    <img src="./images/map-pin-house.png" alt="information_img">
+                    <div class="informationContents">
+                        <h4>Address</h4>
+                        <p>Slipway, Amasoma, Bayelsa State</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formContents">
+                <form id="contactForm">
+                    <h2>Send a Message</h2>
+
+                    <div class="form-control">
+                        <label for="nameInput">Name</label>
+                        <input type="text" id="nameInput" placeholder="Enter name...">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="emailInput">Email</label>
+                        <input type="email" id="emailInput" placeholder="Enter email...">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="messageInput">Message</label>
+                        <textarea id="messageInput" placeholder="type something..."></textarea>
+                    </div>
+
+                    <p id="contactError">Error message</p>
+
+                    <button id="submitBtn">
+                        Send Message
+                        <img src="./images/arrow-right.png" alt="send-icon_img">
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer">
+                <div class="footLogo">
+                    <h3>OA GRAPH <span>IX</span></h3>
+
+                    <div class="footLogoPara">
+                        <p>Ideas</p>
+                        <p>Designs</p>
+                        <p>Impact</p>
+                    </div>
+                </div>
+
+                <div class="footHandles">
+
+                    <div class="handle">
+                        <img src="./images/mail (1).png" alt="handle_icon">
+                        <p>olalianointed@gmail.com</p>
+                    </div>
+
+                    <div class="handle">
+                        <img src="./images/phone (1).png" alt="handle_icon">
+                        <p>+234 916 6104 682</p>
+                    </div>
+
+                    <div class="handle">
+                        <img src="./images/map-pin-house.png" alt="handle_icon">
+                        <p>Slipway, Amasoma, Bayelsa State</p>
+                    </div>
+
+                </div>
+
+                <div class="socialHandles">
+                    <img src="./images/whatsApp-logo.png" alt="socialHandle">
+                    <img src="./images/instagram-logo.png" alt="socialHandle">
+                    <img src="./images/X-logo.png" alt="socialHandle">
+                    <img src="./images/facebook-logo.png" alt="socialHandle">
+                </div>
+            </div>
+
+            <div class="copyRight">
+                <p>Design with Passion - For your brand</p>
+                <p>&copy; 2026 OA Graphix. All rights reserved.</p>
+            </div>
+
+        </footer>
+
+        <div id="contactLoader">
+            <div class="circle"></div>
+            <p id="loadingText">Sending <span id="blink">.</span></p>
+        </div>
+
+    </main>
+    <script src="./script/index.js"></script>
+    <script src="./script/chat.js"></script>
+    <script src="./script/sideNav.js"></script>
+    <script src="./script/contact.js"></script>
+</body>
+
+</html>

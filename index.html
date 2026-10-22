@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OA Graphix</title>
+
+    <link rel="stylesheet" href="./styles/inherit.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body id="hero-section">
+    <main>
+        <header>
+            <div class="header">
+                <h2><span id="letterX">OA</span> GRAPHI <span id="letterX">X</span></h2>
+
+                <nav>
+                    <p class="activeNavLink" id="homeLink">HOME</p>
+                    <p class="passiveNavLink" id="serviceLink">SERVICES</p>
+                    <p class="passiveNavLink" id="worksLink">MY WORKS</p>
+                    <p class="passiveNavLink" id="aboutLink">ABOUT</p>
+                    <p class="passiveNavLink" id="contactLink">CONTACT</p>
+                </nav>
+
+                <div class="talkBtn" onclick="gotoWhatsApp()">
+                    <button class="animateBtn" id="animateBtn">
+                        Let's Talk
+                        <img src="./images/white-arrow.png" alt="arrow-right_img">
+                    </button>
+                </div>
+
+                <div class="menuBtn" onclick="showSideNav()">
+                    <span id="line"></span>
+                    <span id="line"></span>
+                    <span id="line"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- SIDE NAVIGATION LINK -->
+
+        <aside id="asideNavigation">
+            <div class="sideNav">
+                <div id="closeBtn" onclick="hideSideNav()">X</div>
+
+                <div class="navLinks">
+                    <p class="activeSideLink" id="sideHomeLink">HOME</p>
+                    <p class="passiveSideLink" id="sideServiceLink">SERVICES</p>
+                    <p class="passiveSideLink" id="sideWorksLink">MY WORKS</p>
+                    <p class="passiveSideLink" id="sideAboutLink">ABOUT</p>
+                    <p class="passiveSideLink" id="sideContactLink">CONTACT</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CONTENT CONTAINER SECTION -->
+
+        <div class="content">
+
+            <section class="hero-section">
+                <div class="intro">
+                    <p id="introLabel">GRAPHIC DESIGN STUDIO</p>
+
+                    <!-- <h2>Turning Ideas <br>
+                        Into <br>
+                        <span>VISUAL STORIES</span><br>
+                    </h2> -->
+
+                    <h2>GOOD DESIGN <br>
+                        <span>BOLD IDEAS</span><br>
+                        LASTING IMPACT
+                    </h2>
+                    <p id="introCaption">
+                        Creative flyers and posters designed to capture attention,
+                        communicate clearly, and bring your ideas to life.
+                    </p>
+
+                    <div class="button-container">
+                        <button id="viewWorkBtn" onclick="gotoProjects()">
+                            View My Work
+                            <img src="./images/white-arrow.png" alt="arrow-img_icon">
+                        </button>
+                        <button id="letsWorkBtn" onclick="window.location.href = 'contact.html'">Let's Work
+                            Together</button>
+                    </div>
+                </div>
+
+                <div class="user-image">
+                    <img src="./images/hero-img.png" alt="hero-img">
+                </div>
+            </section>
+
+            <section class="creativeSection" id="creativeSection">
+
+                <div class="creativeContainer">
+                    <img src="./images/flame.png" alt="creative_img" loading="lazy">
+                    <div class="creativeContent">
+                        <h3>Creative Approach</h3>
+                        <p>Unique ideas that make your brand stand out.</p>
+                    </div>
+                </div>
+
+                <div class="creativeContainer">
+                    <img src="./images/target.png" alt="target_img" loading="lazy">
+                    <div class="creativeContent">
+                        <h3>Clear Communication</h3>
+                        <p>Your vision, our priority from start to finish</p>
+                    </div>
+                </div>
+
+                <div class="creativeContainer">
+                    <img src="./images/zap.png" alt="flash_img" loading="lazy">
+                    <div class="creativeContent">
+                        <h3>On-Time Delivery</h3>
+                        <p>Quality designs, delivered as promised</p>
+                    </div>
+                </div>
+
+                <div class="creativeContainer">
+                    <img src="./images/shield-check.png" alt="shield_img" loading="lazy">
+                    <div class="creativeContent">
+                        <h3>Client Satisfaction</h3>
+                        <p>Your success is our greatest reward.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="design-section" id="design-section">
+                <div class="designSectionContainer">
+                    <p id="selectedWorks">Selected Works</p>
+                    <h2 class="speak">Designs That <span id="speak">Speak</span></h2>
+
+                    <div class="designContainer">
+                        <img src="./images////projects/IMG-20260805-WA0006.jpg" alt="image_one" height="350px"
+                            id="firstImage" loading="lazy">
+                        <img src="./images//projects/IMG-20260824-WA0023.jpg" alt="image_two" height="350px"
+                            id="secondImage" loading="lazy">
+                        <img src="./images/projects/IMG-20260824-WA0027.jpg" alt="image_three" height="350px"
+                            id="thirdImage" loading="lazy">
+                        <img src="./images/projects/IMG-20261017-WA0002.jpg" alt="image_four" height="350px"
+                            id="fourthImage" loading="lazy">
+                    </div>
+                    <p id="seeAll" onclick="gotoProjects()">See all</p>
+
+                </div>
+
+            </section>
+            <!-- <section class="aboutmeSection">
+                <div class="aboutContainer">
+
+                    <div class="aboutContent">
+                        <p id="about">ABOUT ME</p>
+                        <h2>Creativity With <br><span id="purpose">Purpose</span></h2>
+                        <p id="aboutText">
+                            I'm <strong>Anointed Olali,</strong> CEO of OA Graphix and a medical student with
+                            a passion for creativity and visual communication. <br><br>
+                            I create clean, eye
+                        </p>
+                    </div>
+
+                </div>
+            </section> -->
+
+            <section class="servicesSection" id="servicesSection">
+                <p id="servicesText">SERVICES</p>
+                <!-- <h3>My <span id="do">SERVICES</span></h3> -->
+                <h3>What We <span id="do">Do.</span></h3>
+                <p id="needs">Professional Designs tailored to your needs</p>
+
+                <div class="servicesContainer">
+
+                    <!-- SERVICE BOX -->
+
+                    <div class="servicesBox">
+                        <img src="./images/card-4.png" alt="icon_img" loading="lazy">
+
+                        <h4>Flyer Design</h4>
+                        <p>
+                            Creative, attention-grabbing flyers designed to communicate your message clearly
+                            and make your promotions stand out.
+                        </p>
+                        <img src="./images/white-arrow.png" alt="arrow-right_img" class="next" loading="lazy" onclick="gotoProjects()">
+                    </div>
+
+                    <!-- SERVICE BOX -->
+
+                    <div class="servicesBox">
+                        <img src="./images/card-2.png" alt="icon_img" loading="lazy">
+
+                        <h4>Poster Design</h4>
+                        <p>
+                            Visually compelling posters that capture attention and communicate your message
+                            effectively
+                        </p>
+                        <img src="./images/white-arrow.png" alt="arrow-right_img" class="next" loading="lazy" onclick="gotoProjects()">
+
+                    </div>
+
+                    <!-- SERVICE BOX -->
+
+                    <div class="servicesBox">
+                        <img src="./images/card-1.png" alt="icon_img" loading="lazy">
+
+                        <h4>Promotional Graphics</h4>
+                        <p>
+                            Eye-catching designs for events, product launches, announcements and social media campaigns
+                        </p>
+                        <img src="./images/white-arrow.png" alt="arrow-right_img" class="next" loading="lazy" onclick="gotoProjects()">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ABOUT SECTION -->
+
+            <section id="aboutSection">
+                <div class="aboutIntro">
+                    <div class="aboutContent">
+                        <p id="aboutText">ABOUT</p>
+                        <h2>The Story <br>Behind
+                            <span>OA Graphix</span>
+                        </h2>
+                        <p>Creativity, Purpose, and a vision to make a difference through design</p>
+                    </div>
+
+                    <div class="imageContainer">
+                        <img src="./images/user-image.png" alt="user_img" id="userImage" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="aboutContents">
+                    <div class="aboutTextContent">
+                        <h3>Meet Anointed Olali</h3>
+                        <p>
+                            I'm Anointed Olali, CEO of OA Graphix and a medical student
+                            with a passion for creativity and visual communication.
+                            <br><br>
+                            I create clean, eye-catching flyers and posters that transform ideas
+                            into competing visual experiences. My goal is to help brands, businesses
+                            and individuals communicate their messages effectively through thoughtful
+                            and engaging designs
+                        </p>
+                    </div>
+
+                    <div class="journeyContainer">
+
+                        <h3>My Journey</h3>
+
+                        <div class="gridDispayJourney">
+                            <div class="journeyContent">
+                                <div class="repIcon"><img src="./images/graduation-cap.png" alt="journey_img"
+                                        loading="lazy"></div>
+                                <div class="journeyText">
+                                    <h4>Medical Student</h4>
+                                    <p>Studying medicine, building designs</p>
+                                </div>
+                            </div>
+
+                            <div class="journeyContent">
+                                <div class="repIcon"><img src="./images/pen-line.png" alt="journey_img" loading="lazy">
+                                </div>
+                                <div class="journeyText">
+                                    <h4>Graphic Designer</h4>
+                                    <p>Turning ideas into visuals</p>
+                                </div>
+                            </div>
+
+                            <div class="journeyContent">
+                                <div class="repIcon"><img src="./images/siren.png" alt="journey_img" loading="lazy">
+                                </div>
+                                <div class="journeyText">
+                                    <h4>Creative Thinker</h4>
+                                    <p>Always looking for better ways</p>
+                                </div>
+                            </div>
+
+                            <div class="journeyContent">
+                                <div class="repIcon"><img src="./images/bolt.png" alt="journey_img" loading="lazy">
+                                </div>
+                                <div class="journeyText">
+                                    <h4>Problem Solver</h4>
+                                    <p>Designs that make an impact</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="countContainer">
+
+                <div class="countBox">
+                    <h3>20+</h3>
+                    <p>Designs Completed</p>
+                </div>
+
+                <div class="bar"></div>
+
+                <div class="countBox">
+                    <h3>10+</h3>
+                    <p>Happy Clients</p>
+                </div>
+
+                <div class="bar"></div>
+
+
+                <div class="countBox">
+                    <h3>1+</h3>
+                    <p>Years of Creative Journey</p>
+                </div>
+
+            </div>
+
+            <section id="CallToAction">
+                <h3>Let's Create Something Amazing</h3>
+                <p>Have a project in mind? Get in touch to bring your ideas to life</p>
+                <button class="ctaBtn" onclick="gotoWhatsApp()">
+                    Get in Touch
+                    <img src="./images/arrow-right.png" alt="arrow_Img" loading="lazy">
+                </button>
+            </section>
+
+
+        </div>
+
+        <footer>
+            <div class="footer">
+                <div class="footLogo">
+                    <h3>OA GRAPH <span>IX</span></h3>
+
+                    <div class="footLogoPara">
+                        <p>Ideas</p>
+                        <p>Designs</p>
+                        <p>Impact</p>
+                    </div>
+                </div>
+
+                <div class="footHandles">
+
+                    <div class="handle">
+                        <img src="./images/mail (1).png" alt="handle_icon" loading="lazy">
+                        <p>olalianointed@gmail.com</p>
+                    </div>
+
+                    <div class="handle">
+                        <img src="./images/phone (1).png" alt="handle_icon" loading="lazy">
+                        <p>+234 916 6104 682</p>
+                    </div>
+
+                    <div class="handle">
+                        <img src="./images/map-pin-house.png" alt="handle_icon" loading="lazy">
+                        <p>Slipway, Amasoma, Bayelsa State</p>
+                    </div>
+
+                </div>
+
+                <div class="socialHandles">
+                    <img src="./images/whatsApp-logo.png" alt="socialHandle" loading="lazy" onclick="gotoWhatsApp()">
+                    <img src="./images/instagram-logo.png" alt="socialHandle" loading="lazy">
+                    <img src="./images/X-logo.png" alt="socialHandle" loading="lazy">
+                    <img src="./images/facebook-logo.png" alt="socialHandle" loading="lazy">
+                </div>
+            </div>
+
+            <div class="copyRight">
+                <p>Design with Passion - For your brand</p>
+                <p>&copy; 2026 OA Graphix. All rights reserved.</p>
+            </div>
+
+        </footer>
+
+    </main>
+    <script src="./script/index.js"></script>
+    <script src="./script/chat.js"></script>
+    <script src="./script/sideNav.js"></script>
+</body>
+
+</html>

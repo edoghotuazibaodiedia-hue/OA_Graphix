@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="./styles/inherit.css">
+    <link rel="stylesheet" href="./styles/project.css">
+</head>
+
+<body id="projectContainer">
+    <main>
+        <header>
+            <div class="header">
+                <h2><span id="letterX">OA</span> GRAPHI <span id="letterX">X</span></h2>
+
+                <nav id="project-nav">
+                    <p class="passiveNavLink" id="homeLink" onclick="window.location.href = 'index.html'">
+                        Back to home</p>
+                    <!-- <p class="activeNavLink" id="serviceLink">SERVICES</p>
+                    <p class="passiveNavLink" id="worksLink">MY WORKS</p>
+                    <p class="passiveNavLink" id="aboutLink">ABOUT</p>
+                    <p class="passiveNavLink" id="contactLink">CONTACT</p> -->
+                </nav>
+
+                <div class="talkBtn" onclick="gotoWhatsApp()">
+                    <button class="animateBtn" id="animateBtn">
+                        Let's Talk
+                        <img src="./images/white-arrow.png" alt="arrow-right_img">
+                    </button>
+                </div>
+
+                <!-- <div class="menuBtn" onclick="showSideNav()">
+                    <span id="line"></span>
+                    <span id="line"></span>
+                    <span id="line"></span>
+                </div> -->
+            </div>
+        </header>
+
+        <div class="projectContents">
+
+            <div class="projectIntro">
+                <p>MY CREATIVE ARCHIVE</p>
+                <h2>Selected Works & <span>Visual Stories</span></h2>
+                <p id="projectCaption">
+                    A collection of ideas transformed into
+                    compelling visual experience
+                </p>
+            </div>
+
+            <div class="projectCount">
+                <p id="count">06+</p>
+                <p id="countText">CREATIVE PROJECTS</p>
+            </div>
+
+            <!-- PROJECTS IMAGES -->
+            
+            <div class="projectContainer">
+                <div class="projectBox">
+                    <img src="./images/projects/IMG-20260805-WA0006.jpg" alt="image_1">
+                    <p>FLYER DESIGN</p>
+                    <h4>Church Event Flyer</h4>
+                    <button onclick="showPreview(0)">Preview</button>
+                </div>
+
+                <div class="projectBox">
+                    <img src="./images/projects/IMG-20260824-WA0023.jpg" alt="image_1">
+                    <p>FLYER DESIGN</p>
+                    <h4>Church Event Flyer</h4>
+                    <button onclick="showPreview(1)">Preview</button>
+                </div>
+
+                <div class="projectBox">
+                    <img src="./images/projects/IMG-20260824-WA0026.jpg" alt="image_1">
+                    <p>FLYER DESIGN</p>
+                    <h4>Church Event Flyer</h4>
+                    <button onclick="showPreview(2)">Preview</button>
+                </div>
+
+                <div class="projectBox">
+                    <img src="./images/projects/IMG-20260824-WA0027.jpg" alt="image_1">
+                    <p>FLYER DESIGN</p>
+                    <h4>Church Event Flyer</h4>
+                    <button onclick="showPreview(3)">Preview</button>
+                </div>
+
+                <div class="projectBox">
+                    <img src="./images/projects/IMG-20261015-WA0007.jpg" alt="image_1">
+                    <p>FLYER DESIGN</p>
+                    <h4>Church Event Flyer</h4>
+                    <button onclick="showPreview(4)">Preview</button>
+                </div>
+
+                <div class="projectBox">
+                    <img src="./images/projects/IMG-20261015-WA0008.jpg" alt="image_1">
+                    <p>FLYER DESIGN</p>
+                    <h4>Church Event Flyer</h4>
+                    <button onclick="showPreview(5)">Preview</button>
+                </div>
+
+                <div class="projectBox">
+                    <img src="./images/projects/IMG-20261017-WA0002.jpg" alt="image_1">
+                    <p>FLYER DESIGN</p>
+                    <h4>Church Event Flyer</h4>
+                    <button onclick="showPreview(6)">Preview</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <footer>
+            <div class="footer">
+                <div class="footLogo">
+                    <h3>OA GRAPH <span>IX</span></h3>
+
+                    <div class="footLogoPara">
+                        <p>Ideas</p>
+                        <p>Designs</p>
+                        <p>Impact</p>
+                    </div>
+                </div>
+
+                <div class="footHandles">
+
+                    <div class="handle">
+                        <img src="./images/mail (1).png" alt="handle_icon" loading="lazy">
+                        <p>olalianointed@gmail.com</p>
+                    </div>
+
+                    <div class="handle">
+                        <img src="./images/phone (1).png" alt="handle_icon" loading="lazy">
+                        <p>+234 916 6104 682</p>
+                    </div>
+
+                    <div class="handle">
+                        <img src="./images/map-pin-house.png" alt="handle_icon" loading="lazy">
+                        <p>Slipway, Amasoma, Bayelsa State</p>
+                    </div>
+
+                </div>
+
+                <div class="socialHandles">
+                    <img src="./images/whatsApp-logo.png" alt="socialHandle" loading="lazy" onclick="gotoWhatsApp()">
+                    <img src="./images/instagram-logo.png" alt="socialHandle" loading="lazy">
+                    <img src="./images/X-logo.png" alt="socialHandle" loading="lazy">
+                    <img src="./images/facebook-logo.png" alt="socialHandle" loading="lazy">
+                </div>
+            </div>
+
+            <div class="copyRight">
+                <p>Design with Passion - For your brand</p>
+                <p>&copy; 2026 OA Graphix. All rights reserved.</p>
+            </div>
+
+        </footer>
+
+        <div class="previewContainer" id="previewContainer">
+            <img class="previewBox" id="previewBox">
+            <button class="closePreviewBtn" onclick="closePreview()">Close Preview</button>
+        </div>
+
+    </main>
+    <script src="./script/sideNav.js"></script>
+    <script src="./script/preview.js"></script>
+</body>
+
+</html>

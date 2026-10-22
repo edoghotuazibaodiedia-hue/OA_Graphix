@@ -1,0 +1,242 @@
+:root  {
+    --primary: #1649D8;
+    --primary-light: #3B82F6;
+    --primary-dark: #0B1F3A;
+    --accent: #60A5FA;
+
+    --background: #07111F;
+    --surface: #0B1F3A;
+    --surface-light: #142B49;
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #A9B9CE;
+}
+
+#project-nav{
+    padding: 3px 5px;
+    width: 60%;
+    display: flex;
+    justify-content: right;
+}
+
+.projectContents{
+    margin-top: 100px;
+    color: var(--text-primary);
+    width: 95%;
+    min-height: 100vh;
+    margin: 10px auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectIntro{
+    margin-top: 100px;
+    p{
+        font-weight: 500;
+        color: var(--primary);
+    }
+
+    h2{
+        font-size: 40px;
+        span{
+            color: var(--primary);
+        }
+    }
+
+    #projectCaption{
+        color: var(--text-primary);
+        width: 300px;
+    }
+}
+
+.projectCount{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    p{
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 18px;
+    }
+
+    #count{
+        color: var(--primary);
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+}
+
+.projectContainer{
+    width: 100%;
+    min-height: 1500px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projectBox{
+    min-height: 400px;
+    max-width: 300px;
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.projectBox img{
+    width: 100%;
+}
+
+.projectBox p{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary);
+    width: 100%;
+}
+
+.projectBox h4{
+    width: 100%;
+    font-weight: 700;
+}
+
+.projectBox button{
+    background: var(--background);
+    border: none;
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 4px var(--primary);
+    color: var(--text-primary);
+    width: 200px;
+    padding: 10px;
+    margin: 15px 0;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.projectBox button:hover{
+    background: var(--surface);
+}
+
+.previewContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    background: #07111fec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 30px;
+    z-index: 9900;
+    overflow: hidden;
+    .previewBox{
+        max-height: 80vh;
+        min-width: 300px;
+        margin-top: 30px;
+        filter: contrast(120%);
+    }
+
+    button{
+        width: 200px;
+        height: 40px;
+        color: var(--text-primary);
+        background: transparent;
+        border: 1px solid var(--primary);
+        border-radius: 25px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+
+    button:hover{
+        background: #164ad85b;
+        box-shadow: 0 0 10px var(--primary);
+    }
+}
+
+@media (max-width: 480px) {
+    .projectIntro{
+        margin-top: 70px;
+        p{
+            font-weight: 500;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        h2{
+            font-size: 30px;
+            span{
+                color: var(--primary);
+            }
+        }
+
+        #projectCaption{
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    .projectCount{
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        p{
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        #count{
+            color: var(--primary);
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    }
+
+    .projectBox{
+        transform: scale(0.9);
+    }
+    
+    .projectContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .previewContainer{
+        .previewBox{
+            max-height: 60vh;
+            min-width: 250px;
+            margin-top: 30px;
+            filter: contrast(120%);
+            background-color: gray;
+        }
+
+        button{
+            width: 200px;
+            height: 40px;
+            color: var(--text-primary);
+            background: transparent;
+            border: 1px solid var(--primary);
+            border-radius: 25px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        button:hover{
+            background: #164ad85b;
+            box-shadow: 0 0 10px var(--primary);
+        }
+    }
+}
